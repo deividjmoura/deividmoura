@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deivid Moura | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: scale(1.05); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3); }
+        .cert-img { transition: all 0.3s ease; }
+        .cert-img:hover { transform: scale(1.08); }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-zinc-900/90 backdrop-blur-md z-50 border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Deivid Moura</h1>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="#sobre" class="hover:text-white transition">Sobre</a>
+                <a href="#projetos" class="hover:text-white transition">Projetos</a>
+                <a href="#habilidades" class="hover:text-white transition">Habilidades</a>
+                <a href="#certificados" class="hover:text-white transition">Certificados</a>
+                <a href="#experiencia" class="hover:text-white transition">Experiência</a>
+                <a href="#contato" class="hover:text-white transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-6xl font-bold text-white mb-6">Olá, eu sou Deivid Moura</h2>
+                <p class="text-xl text-zinc-400 mb-8">Desenvolvedor apaixonado por criar soluções práticas. De vendas online na Havan a apps personalizados na Copia & CIA, estou em transição para desenvolvimento full-time.</p>
+                <div class="flex gap-4">
+                    <a href="SEU_CV.pdf" download class="bg-white text-zinc-950 px-8 py-4 rounded-full font-semibold hover:bg-zinc-200 transition">Baixar CV</a>
+                    <a href="https://github.com/deividjmoura" target="_blank" class="border border-zinc-500 px-8 py-4 rounded-full font-semibold hover:bg-zinc-800 transition">GitHub</a>
+                </div>
+            </div>
+            <img src="img/prof2.png" alt="Deivid Moura" class="rounded-3xl shadow-2xl w-full max-w-md mx-auto">
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-5xl font-bold text-center mb-16">Um pouco sobre mim</h2>
+        <div class="grid md:grid-cols-2 gap-12 text-lg leading-relaxed text-zinc-300">
+            <div>
+                <p>Trabalhei 8 meses em vendas online na Havan e desenvolvi um app em React para gerenciar pedidos e gerar relatórios de serviço.</p>
+                <p class="mt-6">Hoje trabalho na <a href="https://copiaecia.com.br/" class="text-blue-400 underline">Copia & CIA</a> como programador visual gráfico e estou desenvolvendo o C&amp;C App (Google AppSheet) para controle de vendas dos vendedores.</p>
+            </div>
+            <div>
+                <p>Desde criança me interesso por programação (blogs e apps mobile). Meu objetivo é migrar 100% para desenvolvimento e continuar criando soluções que facilitam a vida das pessoas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="bg-zinc-900 py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16">Projetos</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Projeto 1 -->
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="img/PROJECT1.jpg" class="w-full h-80 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-4">Vendas Online - Havan</h3>
+                        <p class="text-zinc-400">App em React para gerenciamento de pedidos com download de relatório de serviço. Desenvolvido durante 8 meses na área de vendas online.</p>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="img/PROJECT2.jpg" class="w-full h-80 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-4">C&amp;C App</h3>
+                        <p class="text-zinc-400">App em desenvolvimento com Google AppSheet para controle de vendas na Copia & CIA. Versão ao vivo já disponível!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-5xl font-bold text-center mb-16">Habilidades</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-zinc-900 p-10 rounded-3xl text-center card-hover">
+                <div class="text-6xl mb-6">🎨</div>
+                <h4 class="text-2xl font-semibold mb-3">CSS</h4>
+                <p class="text-zinc-400">Uso de bibliotecas modernas para layouts rápidos e bonitos.</p>
+            </div>
+            <div class="bg-zinc-900 p-10 rounded-3xl text-center card-hover">
+                <div class="text-6xl mb-6">📄</div>
+                <h4 class="text-2xl font-semibold mb-3">HTML</h4>
+                <p class="text-zinc-400">Componentes semânticos e acessíveis.</p>
+            </div>
+            <div class="bg-zinc-900 p-10 rounded-3xl text-center card-hover">
+                <div class="text-6xl mb-6">⚡</div>
+                <h4 class="text-2xl font-semibold mb-3">JavaScript</h4>
+                <p class="text-zinc-400">Linguagem principal – React, Node, AppSheet e muito mais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICADOS (aqui você coloca TODOS) -->
+    <section id="certificados" class="bg-zinc-900 py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-6">Certificados (44+)</h2>
+            <p class="text-center text-zinc-400 mb-12">Baixe todos do Google Photos e adicione na pasta <code>img/CERTIFICATIONS/</code>. Já tem 44 lá!</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                <!-- Exemplos (copie o padrão para os outros 40+) -->
+                <img src="img/CERTIFICATIONS/Deivid De Jesus De Moura_HTML.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <img src="img/CERTIFICATIONS/Deivid De Jesus De Moura_JavaScript.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <img src="img/CERTIFICATIONS/Deivid De Jesus De Moura_CSS.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <img src="img/CERTIFICATIONS/NextJS.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <img src="img/CERTIFICATIONS/ReactNative-snapshot-image182942446631348012.png" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <img src="img/CERTIFICATIONS/Course_Certificate.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)">
+                <!-- Adicione aqui os outros 38... -->
+                <!-- Exemplo de como adicionar mais: -->
+                <!-- <img src="img/CERTIFICATIONS/nome-do-seu-certificado.jpg" class="cert-img rounded-2xl shadow-xl cursor-pointer" onclick="window.open(this.src)"> -->
+            </div>
+            <p class="text-center text-sm text-zinc-500 mt-10">Clique nas imagens para ver em tamanho completo</p>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA / EDUCAÇÃO -->
+    <section id="experiencia" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-5xl font-bold text-center mb-16">Educação e Experiência</h2>
+        <div class="space-y-12 max-w-3xl mx-auto">
+            <div class="flex gap-8">
+                <div class="text-right w-24 shrink-0">
+                    <p class="font-semibold">2022 - Hoje</p>
+                </div>
+                <div class="flex-1 bg-zinc-900 p-8 rounded-3xl">
+                    <p class="font-semibold text-lg">Copia & CIA – Programador Visual Gráfico + Desenvolvedor C&amp;C App</p>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div class="text-right w-24 shrink-0">
+                    <p class="font-semibold">2021 - 2022</p>
+                </div>
+                <div class="flex-1 bg-zinc-900 p-8 rounded-3xl">
+                    <p class="font-semibold text-lg">Havan – Vendas Online + App React</p>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div class="text-right w-24 shrink-0">
+                    <p class="font-semibold">2013 - 2021</p>
+                </div>
+                <div class="flex-1 bg-zinc-900 p-8 rounded-3xl">
+                    <p class="font-semibold text-lg">Freelancer e CLT + cursos intensivos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="bg-zinc-900 py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">Vamos conversar?</h2>
+            <form id="contactForm" class="max-w-md mx-auto space-y-6">
+                <input type="text" placeholder="Seu nome" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500">
+                <input type="email" placeholder="Seu e-mail" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500">
+                <textarea placeholder="Mensagem" rows="5" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500"></textarea>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 py-5 rounded-2xl font-semibold text-lg transition">Enviar mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+        <p>© 2026 Deivid Moura • Feito com ❤️ e muito Tailwind</p>
+        <p class="mt-2">Santa Catarina, Brasil</p>
+    </footer>
+
+    <script>
+        // Tailwind script já roda
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Mensagem enviada! (em produção você conecta ao EmailJS ou Formspree)');
+        });
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
