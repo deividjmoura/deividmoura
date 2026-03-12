@@ -34,6 +34,47 @@
     }
     .card:hover { transform: rotateY(calc(var(--i) * 30deg)) translateZ(500px) scale(1.05); }
     @keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+
+    .gallery {
+  --size: 150px; /* Ajustei para maior, para certificados */
+  display: grid;
+  grid-template-columns: repeat(6, var(--size));
+  grid-auto-rows: var(--size);
+  margin-bottom: var(--size);
+  place-items: start center;
+  gap: 5px;
+  
+  &:has(:hover) img:not(:hover),
+  &:has(:focus) img:not(:focus){
+    filter: brightness(0.5) contrast(0.5);
+  }
+
+  & img {
+    object-fit: cover;
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+    transition: clip-path 0.25s, filter 0.75s;
+    grid-column: auto / span 2;
+    border-radius: 5px;
+
+    &:nth-child(5n - 1) { 
+      grid-column: 2 / span 2 
+    }
+
+    &:hover,
+    &:focus {
+      clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+      z-index: 1;
+      transition: clip-path 0.25s, filter 0.25s;
+    }
+    
+    &:focus {
+      outline: 1px dashed black;
+      outline-offset: -5px;
+    }
+  }
+}
   </style>
 </head>
 <body class="bg-[#0a071f] text-white overflow-x-hidden">
@@ -170,24 +211,22 @@
     </div>
   </section>
 
- <!-- CURSOS -->
+<!-- CURSOS -->
 <section id="cursos" class="py-24 bg-[#110d2b]">
   <div class="max-w-5xl mx-auto px-6 text-center">
     <h2 class="text-5xl heading-font mb-6">Cursos &amp; Certificados</h2>
     <p class="text-zinc-400 mb-16">Mais de 44 certificados — aqui estão alguns dos meus favoritos</p>
 
-    <div class="scene">
-      <div class="carousel">
-        <div class="card" style="--i: 0"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_css.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 1"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_flutter-1.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 2"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_html.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 3"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_javascript.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 4"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_machine%20learning.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 5"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_node%20js_page-0001.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 6"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/nextjs.jpg" class="w-full h-full object-cover"></div>
-        <div class="card" style="--i: 7"><img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/reactnative-snapshot-image182942446631348012.png" class="w-full h-full object-cover"></div>
-      </div>
-    </div>
+    <article class="gallery">
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_css.jpg" alt="Certificado CSS" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_flutter-1.jpg" alt="Certificado Flutter" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_html.jpg" alt="Certificado HTML" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_javascript.jpg" alt="Certificado JavaScript" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_machine%20learning.jpg" alt="Certificado Machine Learning" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/deivid%20de%20jesus%20de%20moura_node%20js_page-0001.jpg" alt="Certificado Node.js" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/nextjs.jpg" alt="Certificado Next.js" />
+      <img src="https://raw.githubusercontent.com/deividjmoura/deividmoura/main/img/certifications/reactnative-snapshot-image182942446631348012.png" alt="Certificado React Native" />
+    </article>
   </div>
 </section>
 
@@ -260,3 +299,4 @@
   </script>
 </body>
 </html>
+
