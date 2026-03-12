@@ -35,14 +35,17 @@
     .card:hover { transform: rotateY(calc(var(--i) * 30deg)) translateZ(500px) scale(1.05); }
     @keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
 
-    .gallery {
-  --size: 150px; /* Ajustei para maior, para certificados */
+   .gallery {
+  --size: 200px; /* Aumentado para imagens maiores */
   display: grid;
-  grid-template-columns: repeat(6, var(--size));
+  grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr)); /* Responsivo e centralizado */
   grid-auto-rows: var(--size);
   margin-bottom: var(--size);
+  margin-left: auto; /* Ajuda na centralização */
+  margin-right: auto; /* Ajuda na centralização */
   place-items: start center;
-  gap: 5px;
+  gap: 8px;
+  max-width: 100%; /* Evita overflow */
   
   &:has(:hover) img:not(:hover),
   &:has(:focus) img:not(:focus){
@@ -299,4 +302,5 @@
   </script>
 </body>
 </html>
+
 
